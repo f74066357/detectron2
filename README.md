@@ -33,7 +33,8 @@ python inference.py
 ```
 
 ## My training weight
-
+https://drive.google.com/drive/folders/1shJ9dnprTWWBb4SLl3w-z_qZllXxRuNi?usp=sharing
+PUT this folder output2/ under detectron2/
 
 ## Colab link
 
