@@ -33,6 +33,11 @@ python train.py
 
 * pre-train model: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml" in model zoo
 
+## Plot the training process
+```
+python plot_together.py
+```
+
 ## Inference & Generate answer
 ```
 python inference.py
