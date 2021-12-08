@@ -6,8 +6,14 @@
 24 training images with 14,598 nuclear  
 6 test images with 2,360 nuclear
 
-## Dataset Structure
-
+## Dataset Preparation
+I split 24 images to 20 for training set and 4 for validation set, totally 11691 nuclear: 2907 nuclear.  
+Then, convert the data to COCO dataset format for following training.
+I provide a python code ```convert.py```, just moddify the dataset path and pathlist in line 71 to image path list.
+and install imantics by ```pip install imantics```
+```
+python convert.py
+```
 
 ## Install  Dependencies
 ```
