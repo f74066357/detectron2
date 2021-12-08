@@ -12,7 +12,7 @@ Then, convert the data to COCO dataset format for following training.
 I provide a python code ```convert.py```, just moddify the dataset path and pathlist in line 71 to image path list.
 and install imantics by ```pip install imantics```
 ```
-python convert.py
+python train_val.py
 ```
 
 ## Install  Dependencies
