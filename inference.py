@@ -183,7 +183,7 @@ for i in range(len(images)):
     boxlist = []
     scorelist = []
     outputs = predictor(image)
-    ''' # Visualize
+    # Visualize
     v = Visualizer(
         image[:, :, ::-1],
         metadata=MetadataCatalog.get("val_2019"),
@@ -191,9 +191,9 @@ for i in range(len(images)):
         instance_mode=ColorMode.IMAGE_BW
     )
     out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-    cv2.imshow("show",out.get_image()[:, :, :])
+    cv2.imshow("show", out.get_image()[:, :, :])
     cv2.waitKey(0)
-    '''
+
     for score in outputs["instances"].scores:
         scorelist.append(float(score))
     masks = outputs["instances"].pred_masks.cpu()
