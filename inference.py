@@ -22,6 +22,7 @@ from detectron2.engine import (
 )
 from detectron2.evaluation import COCOEvaluator, verify_results
 from detectron2.modeling import GeneralizedRCNNWithTTA
+from detectron2.utils.visualizer import ColorMode
 import pycocotools._mask as _mask
 
 
@@ -184,13 +185,14 @@ for i in range(len(images)):
     outputs = predictor(image)
     ''' # Visualize
     v = Visualizer(
-        img[:, :, ::-1],
+        image[:, :, ::-1],
         metadata=MetadataCatalog.get("val_2019"),
         scale=0.6,
         instance_mode=ColorMode.IMAGE_BW
     )
     out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-    cv2_imshow(out.get_image()[:, :, :])
+    cv2.imshow("show",out.get_image()[:, :, :])
+    cv2.waitKey(0)
     '''
     for score in outputs["instances"].scores:
         scorelist.append(float(score))
